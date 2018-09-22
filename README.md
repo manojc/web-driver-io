@@ -64,14 +64,15 @@ Run all of the above 3 commands at once i.e.
 ```shell
 npm run allure
 ```
+---
 
-### demo
+## Demo
 
 The test report generated using `allure` is available [here](https://manojc.github.io/web-driver-io/)
 
 ---
 
-## web-driver-io Config Used
+## Config Used in web-driver-io
 
 ```shell
 exports.config = {
