@@ -36,38 +36,6 @@ npm run test
 
 ---
 
-## web-driver-io Config Used
-
-```shell
-exports.config = {
-    specs: [
-        './test/**/*.js'
-    ],
-    exclude: [],
-    maxInstances: 10,
-    capabilities: [{
-        maxInstances: 5,
-        browserName: 'chrome'
-    }],
-    sync: true,
-    logLevel: 'command',
-    coloredLogs: true,
-    deprecationWarnings: true,
-    bail: 0,
-    screenshotPath: './errorShots/',
-    waitforTimeout: 10000,
-    connectionRetryTimeout: 90000,
-    connectionRetryCount: 3,
-    framework: 'mocha',
-    reporters: ['spec'],
-    mochaOpts: {
-        ui: 'bdd'
-    },
-}
-```
-
----
-
 ## Reports
 
 Get allure results
@@ -91,10 +59,51 @@ npm run allure-open
 Run all of the above 3 commands at once i.e. 
 - get results
 - generate reports
-- opne reports in browser (http://localhost:7777)
+- open reports in browser (http://localhost:7777)
 
 ```shell
 npm run allure
+```
+
+### demo
+
+The test report generated using `allure` is available [here](https://manojc.github.io/web-driver-io)
+
+---
+
+## web-driver-io Config Used
+
+```shell
+exports.config = {
+    specs: [
+        './test/**/*.js'
+    ],
+    exclude: [],
+    maxInstances: 10,
+    capabilities: [{
+        maxInstances: 5,
+        browserName: 'chrome'
+    }],
+    sync: true,
+    logLevel: 'command',
+    coloredLogs: true,
+    deprecationWarnings: true,
+    bail: 0,
+    screenshotPath: './errorShots/',
+    waitforTimeout: 10000,
+    connectionRetryTimeout: 90000,
+    connectionRetryCount: 3,
+    framework: 'mocha',
+    reporters: ['dot', 'spec', 'allure'],
+    reporterOptions: {
+        allure: {
+            outputDir: 'allure-results'
+        }
+    },
+    mochaOpts: {
+        ui: 'bdd'
+    },
+}
 ```
 
 ---
