@@ -4,31 +4,33 @@
 
 A small POC to get started with `web-driver-io` using `selenium-standalone` as a local selenium service. Make sure you have JRE & JDK installed before proceeding.
 
+The POC also uses `spec` & `allure` reporters apart from default `dot` reporter to generate reports.
+
 ---
 
 ## How?
 
 Install node dependencies.
 
-```javascript
+```shell
 npm install
 ```
 
 Install `selenium-standalone` service to be able to run selenium server on local machine. This is a one time step.
 
-```javascript
+```shell
 npm run selenium-install
 ```
 
 Run the selenium local server so that `web-driver-io` can run the tests.
 
-```javascript
+```shell
 npm run selenium-start
 ```
 
 Finally, run the tests.
 
-```javascript
+```shell
 npm run test
 ```
 
@@ -36,7 +38,7 @@ npm run test
 
 ## web-driver-io Config Used
 
-```javascript
+```shell
 exports.config = {
     specs: [
         './test/**/*.js'
@@ -62,6 +64,37 @@ exports.config = {
         ui: 'bdd'
     },
 }
+```
+
+---
+
+## Reports
+
+Get allure results
+
+```shell
+npm run allure-result
+```
+
+Generate allure reports
+
+```shell
+npm run allure-report
+```
+
+Open allure reports in browser (port used in 7777)
+
+```shell
+npm run allure-open
+```
+
+Run all of the above 3 commands at once i.e. 
+- get results
+- generate reports
+- opne reports in browser (http://localhost:7777)
+
+```shell
+npm run allure
 ```
 
 ---

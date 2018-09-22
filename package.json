@@ -5,8 +5,12 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "wdio wdio.conf.js",
-		"selenium-start":"selenium-standalone start",
-		"selenium-install":"selenium-standalone install"
+		"selenium-start": "selenium-standalone start",
+		"selenium-install": "selenium-standalone install",
+		"allure-result": "allure generate allure-results --clean",
+		"allure-report": "allure report",
+		"allure-open":"allure open -p 7777",
+		"allure":"npm run allure-result && npm run allure-report && allure open -p 7777"
 	},
 	"repository": {
 		"type": "git",
@@ -20,7 +24,9 @@
 	},
 	"homepage": "https://github.com/manojc/web-driver-io#readme",
 	"devDependencies": {
+		"allure-commandline": "^2.7.0",
 		"selenium-standalone": "^6.15.3",
+		"wdio-allure-reporter": "^0.7.0",
 		"wdio-mocha-framework": "^0.6.3",
 		"wdio-spec-reporter": "^0.1.5",
 		"webdriverio": "^4.13.2"
