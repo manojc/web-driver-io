@@ -1,0 +1,7 @@
+[ {
+  "values" : [ "{\"maxInstances\":5,\"browserName\":\"chrome\"}" ],
+  "name" : "capabilities"
+}, {
+  "values" : [ "[\"/home/kepler/code/github/web-driver-io/test/index-page.test.js\"]" ],
+  "name" : "spec files"
+} ]

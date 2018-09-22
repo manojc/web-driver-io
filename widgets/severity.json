@@ -1,0 +1,11 @@
+[ {
+  "uid" : "7d3c1bc95864fa9a",
+  "name" : "should have the right title - the fancy generator way",
+  "time" : {
+    "start" : 1537644497478,
+    "stop" : 1537644501838,
+    "duration" : 4360
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
