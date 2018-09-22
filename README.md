@@ -67,7 +67,7 @@ npm run allure
 
 ### demo
 
-The test report generated using `allure` is available [here](https://manojc.github.io/web-driver-io)
+The test report generated using `allure` is available [here](https://manojc.github.io/web-driver-io/)
 
 ---
 
