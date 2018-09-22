@@ -38,31 +38,16 @@ npm run test
 
 ## Reports
 
-Get allure results
-
-```shell
-npm run allure-result
-```
-
 Generate allure reports
 
 ```shell
 npm run allure-report
 ```
 
-Open allure reports in browser (port used in 7777)
+Open allure reports in browser (http://localhost:7777)
 
 ```shell
-npm run allure-open
-```
-
-Run all of the above 3 commands at once i.e. 
-- get results
-- generate reports
-- open reports in browser (http://localhost:7777)
-
-```shell
-npm run allure
+npm run allure-serve
 ```
 ---
 

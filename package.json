@@ -7,10 +7,8 @@
 		"test": "wdio wdio.conf.js",
 		"selenium-start": "selenium-standalone start",
 		"selenium-install": "selenium-standalone install",
-		"allure-result": "allure generate allure-results --clean",
-		"allure-report": "allure report",
-		"allure-open":"allure open -p 7777",
-		"allure":"npm run allure-result && npm run allure-report && allure open -p 7777"
+		"allure-report": "allure generate --clean",
+		"allure-serve": "allure open -p 7777"
 	},
 	"repository": {
 		"type": "git",
