@@ -24,6 +24,7 @@
 	"devDependencies": {
 		"allure-commandline": "^2.7.0",
 		"selenium-standalone": "^6.15.3",
+		"shelljs": "^0.8.2",
 		"wdio-allure-reporter": "^0.7.0",
 		"wdio-mocha-framework": "^0.6.3",
 		"wdio-spec-reporter": "^0.1.5",
