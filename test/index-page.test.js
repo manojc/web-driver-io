@@ -1,28 +1,28 @@
 const assert = require('assert');
 
-describe('webdriver.io page', function () {
-    it('should have the right title - the fancy generator way', function () {
-        this.timeout(10000);
+describe('Advance Login Page', function () {
+
+    beforeEach(() => {
         browser.url('/login');
-        const title = browser.getTitle();
-        assert.equal(title, 'Login | PREPROD | Localstars Advance');
+        browser.pause(2000);
     });
 
-    it.only('should login with valid username and password', async function (done) {
-        this.timeout(40000);
-        browser.url('/login');
-        await browser.pause(4000);
+    it('should have the right title - the fancy generator way', function () {
+        const title = browser.getTitle();
+        assert.equal(title, 'blah');
+    });
+
+    it('should login with valid username and password', function () {
 
         const username = $('#email');
-        await username.setValue("admin");
+        username.setValue("blah");
 
         const password = $('#password');
-        await password.setValue("foreveradvancing");
+        password.setValue("blah");
 
-        await browser.submitForm('#login > form');
+        const signIn = $('#login > form > fieldset > div:nth-child(3) > input.button.primary.rgt');
+        signIn.click();
 
-        setTimeout(() => {
-            done();
-        }, 4000);
+        assert.strictEqual("Dashboard", browser.getHTML('#body > section > h1', false));
     });
 });
